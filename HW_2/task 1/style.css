@@ -1,0 +1,58 @@
+.container {
+    width: 40%;
+    margin: 0 auto;
+    min-width: 500px;
+}
+
+.container>div>div {
+    font-size: 40px;
+    padding: 60px 50px;
+    border: 2px solid rgba(82, 82, 82, 0.997);
+}
+
+.container_pink div {
+    background: pink;
+}
+
+.container_grey div {
+    background: grey;
+}
+
+.container_yellow div {
+    background: rgb(255, 235, 13);
+}
+
+.container_green div {
+    background: rgb(176, 226, 122);
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.container_pink {
+    width: 90%;
+    margin: 0 0 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_grey {
+    width: 80%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_yellow {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container_green {
+    display: flex;
+    justify-content: stretch;
+}

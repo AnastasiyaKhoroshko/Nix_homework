@@ -1,0 +1,86 @@
+body {
+    max-width: 90%;
+    margin: 0 auto;
+
+}
+
+.container div {
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 50px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        'a a b c d'
+        'e f g g h'
+        'i j g g .'
+        'k k k l m';
+}
+
+.blok-a {
+    grid-area: a;
+}
+
+.blok-b {
+    grid-area: b;
+}
+
+.blok-c {
+    grid-area: c;
+}
+
+.blok-d {
+    grid-area: d;
+}
+
+.blok-e {
+    grid-area: e;
+}
+
+.blok-f {
+    grid-area: f;
+}
+
+.blok-g {
+    grid-area: g;
+}
+
+.blok-h {
+    grid-area: h;
+}
+
+.blok-i {
+    grid-area: i;
+}
+
+.blok-j {
+    grid-area: j;
+}
+
+.blok-k {
+    grid-area: k;
+}
+
+.blok-l {
+    grid-area: l;
+}
+
+.blok-m {
+    grid-area: m;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+    .container {
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            'a a b c d e f g g h i'
+            'j k k k l m . g g . .';
+    }
+}
