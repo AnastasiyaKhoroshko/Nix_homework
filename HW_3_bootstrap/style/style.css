@@ -1,0 +1,483 @@
+/* font-family: 'Montserrat',
+sans-serif;
+font-family: 'Open Sans',
+sans-serif;
+
+экран - 1400px, контаинер - 1320px, контент - 1290px (отступы у колонок справа и слева 15px */
+:root {
+    --ff-opsans: 'Open Sans',
+        sans-serif;
+    --ff-montserrat: 'Montserrat',
+        sans-serif;
+    --hover-color: #8aad00;
+    --active-color: rgb(86, 109, 1);
+}
+
+.header {
+    background: url(../images/Header_Background.png) no-repeat;
+    background-size: cover;
+    font-family: var(--ff-opsans);
+    padding-top: 50px;
+}
+
+button {
+    z-index: 4;
+}
+
+/* Header - nav */
+
+.header__nav {
+    justify-content: end;
+    padding-top: 50px;
+    margin-right: -90px;
+}
+
+.header__toggler {
+    background: white;
+    margin-top: 30px;
+}
+
+.header__list {
+    margin-right: 60px;
+}
+
+.header .header__list .header__list_link {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3.33px;
+    padding-left: 50px;
+    text-shadow: 0 0 3px #2e3034;
+}
+
+.header .header__list_link:link {
+    color: #ffffff;
+}
+
+
+.header .header__list_link:hover {
+    color: var(--hover-color);
+}
+
+.header .header__list_link:active {
+    color: var(--active-color);
+}
+
+.header__nav .header__search {
+    height: 50px;
+    width: auto;
+    float: right;
+    position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+    .header__nav .header__search {
+        float: left;
+        margin-left: 48px;
+    }
+}
+
+.header__nav .header__search:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 40px;
+    margin: auto 0;
+    width: 30px;
+    height: 30px;
+    background: url("../images/Search.svg") no-repeat;
+    background-size: cover;
+}
+
+.header__nav .header__search input {
+    border-radius: 60px;
+    width: 180px;
+    transition: .5s linear;
+}
+
+.header__nav .header__search input:focus {
+    width: 550px;
+    box-shadow: 0 0 10px black;
+}
+
+/* Header - offer */
+
+.offer-cont {
+    padding: 150px 0 236px;
+
+
+}
+
+.offer-cont__title {
+    margin: 50px 0 50px -60px;
+}
+
+.offer-cont__subtitle {
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 4.61px;
+}
+
+.offer-cont__btn {
+    margin: 30px 0 30px;
+}
+
+.btn-bd-primary-white {
+    --bs-btn-font-weight: 800;
+    --bs-btn-color: #2e3034;
+    --bs-btn-border-radius: 60px;
+    --bs-btn-hover-color: var(--hover-color);
+    --bs-btn-hover-bg: transition;
+    --bs-btn-hover-border-color: #{shade-color(var(--hover-color), 10%)};
+    --bs-btn-active-color: var(--active-color);
+    --bs-btn-active-bg: transition;
+    --bs-btn-active-border-color: #{shade-color(--active-color, 20%)};
+    font-size: 25px;
+    padding: 14px 37px;
+}
+
+.offer-cont__text {
+    font-size: 21px;
+    font-style: italic;
+    max-width: 475px;
+    margin-bottom: 0;
+}
+
+.offer-foto {
+    margin-right: -110px;
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+    .offer-foto {
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+/* Section - menu */
+
+.menu {
+    padding: 35px 0 50px;
+    font-family: var(--ff-montserrat);
+}
+
+.menu__title {
+    margin: 0 auto;
+}
+
+.menu__subtitle {
+    margin: 38px 0 97px;
+    max-width: 700px;
+    color: #2f3135;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.menu__btn_left {
+    justify-content: start;
+}
+
+.menu__btn_right {
+    justify-content: end;
+}
+
+.menu__carousel {
+    bottom: 40px;
+}
+
+.menu__card {
+    border: none;
+    margin-bottom: 120px;
+}
+
+.menu__card_all-text {
+    padding-left: 70px;
+}
+
+.menu__card_title {
+    color: #343434;
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.menu__card_text {
+    color: #343434;
+    font-size: 23px;
+}
+
+.btn-bd-primary-black {
+    --bs-btn-bg: #343434;
+    --bs-btn-font-weight: 800;
+    --bs-btn-border-radius: 60px;
+    --bs-btn-hover-color: var(--hover-color);
+    --bs-btn-hover-bg: #343434f3;
+    --bs-btn-hover-border-color: #{shade-color(var(--hover-color), 10%)};
+    --bs-btn-active-color: var(--active-color);
+    --bs-btn-active-bg: #222222;
+    --bs-btn-active-border-color: #{shade-color(--active-color, 20%)};
+    font-size: 25px;
+    padding: 14px 37px;
+    margin: 0;
+}
+
+/* Section - Our story */
+
+.story {
+    background: #27292c;
+}
+
+.story__title {
+    margin: 50px 0;
+}
+
+.story__text {
+    gap: 60px;
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: var(--ff-montserrat);
+    font-size: 17px;
+    line-height: 25.83px;
+}
+
+.story__btn {
+    margin: 70px 0;
+}
+
+.story__btn button {
+    margin-left: 20px;
+}
+
+/* SEction - Discount */
+
+.discount {
+    padding: 50px 0 0;
+}
+
+.discount__flex {
+    gap: 125px;
+}
+
+.discount__row {
+    gap: 60px;
+}
+
+.discount__text {
+    color: #27292c;
+    font-family: var(--ff-opsans);
+    flex: 1 1 50%;
+}
+
+.text__title {
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.text__text {
+    font-size: 29px;
+    line-height: 32px;
+    font-weight: 400;
+    margin: 50px 0;
+}
+
+.discount__foto {
+    flex: 0 1 50%;
+}
+
+.discount__foto img {
+    width: 100%;
+}
+
+/* Section - Special */
+
+.special {
+    padding-top: 108px;
+    background: url(../images/Header_Background.png) no-repeat;
+    background-size: cover;
+    height: 1080px;
+    position: relative;
+    margin: auto;
+}
+
+.special__text {
+    max-width: 706px;
+    color: #f8f6f1;
+    font-family: (--ff-montserrat);
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 33.33px;
+    letter-spacing: normal;
+    opacity: .7;
+}
+
+.special__line {
+    margin: 40px auto 0;
+    width: 162px;
+    height: 11px;
+    background-color: #fafafa;
+}
+
+.special__background {
+    position: absolute;
+    top: -13%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+    .special__background {
+        top: 7%;
+    }
+}
+
+.special__background img {
+    width: 100%;
+}
+
+/* Section - Info */
+.info {
+    padding: 136px 0 190px;
+}
+
+.info__row {
+    padding: 0 50px 0;
+}
+
+.info__title {
+    margin-bottom: 16px;
+}
+
+.info__text {
+    color: #333d42;
+    font-family: var(--ff-opsans);
+    font-size: 19px;
+    line-height: 24.93px;
+}
+
+.info__main-text {
+    max-width: 790px;
+    margin: 233px auto 56px;
+    color: #3f3f3f;
+    font-family: var(--ff-opsans);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.info__main-subtext {
+    color: #3f3f3f;
+    font-family: var(--ff-opsans);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 33.33px;
+}
+
+/* Section - Contact us */
+
+.contact-us {
+    background-color: #27292c;
+    color: #ffffff;
+    font-family: var(--ff-opsans);
+    height: 1000px;
+}
+
+.container {
+    height: 100%;
+}
+
+.contact-us__row {
+    height: 100%;
+}
+
+.contact-us__title {
+    font-size: 75px;
+    font-weight: 700;
+}
+
+.contact-us__subtitle {
+    max-width: 900px;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 70px auto 82px;
+}
+
+.form__items {
+    max-width: 700px;
+    gap: 4%;
+}
+
+.form__item {
+    flex: 1 1 48%;
+    margin-bottom: 2%;
+}
+
+.form__item input {
+    border-radius: 60px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.form__item input:focus {
+    box-shadow: 0 0 5px var(--hover-color);
+    border: 3px solid var(--hover-color);
+}
+
+.form__btn {
+    margin-top: 30px;
+}
+
+/* Footer */
+
+.footer {
+    color: #343434;
+    font-family: var(--ff-montserrat);
+    padding: 336px 0 390px;
+}
+
+.footer__row {
+    gap: 150px;
+}
+
+.footer__text {
+    flex: 1 1 33%;
+}
+
+.footer__title {
+    font-size: 32px;
+}
+
+.footer__subtitle {
+    font-size: 24px;
+    margin: 35px 0;
+}
+
+.footer__social a {
+    margin-right: 15px;
+}
+
+.footer__nav {
+    flex: 1 1 55%;
+}
+
+.f-navigation_grup {
+    font-size: 32px;
+    margin-bottom: 37px;
+}
+
+.f-navigation__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.f-navigation__list a {
+    color: #343434;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 41.76px;
+}
+
+.f-navigation__list a:hover {
+    color: #808080;
+}
